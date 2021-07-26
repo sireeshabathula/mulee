@@ -5,11 +5,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="a37b4a79-c83c-476d-905a-0a1a9250eb54" >
-		<http:listener-connection host="0.0.0.0" port="8081" />
+		<http:listener-connection host="0.0.0.0" port="8099" />
 	</http:listener-config>
 	<flow name="simple-project1Flow" doc:id="1665103e-6802-4a9d-ac1f-1cc869aad0e8" >
 		<http:listener doc:name="Listener" doc:id="0cc8bf5d-bca4-4163-85ae-802e93af0ac9" config-ref="HTTP_Listener_config" path="/github"/>
-		<logger level="INFO" doc:name="Logger" doc:id="c2dd6b66-37b8-427f-91f7-e060bc181772" message="this project for github cls in egit"/>
-		<set-payload value="githubclass in egit" doc:name="github" doc:id="a00ca9fd-ac51-48dd-ad67-af6a032aa96f" />
+		<logger level="INFO" doc:name="Logger" doc:id="c2dd6b66-37b8-427f-91f7-e060bc181772" message="this project for github cls using egit scm"/>
+		<set-payload value="githubclass using egit scm" doc:name="github" doc:id="a00ca9fd-ac51-48dd-ad67-af6a032aa96f" />
 	</flow>
 </mule>
